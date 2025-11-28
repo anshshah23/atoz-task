@@ -11,12 +11,12 @@ to analyze 1M+ customer transactions with optimized analytical queries meeting
 5-65ms performance targets.
 
 Server Details:
-- IP: 15.204.94.120
+- IP: *.*.*.*
 - OS: Ubuntu 22.04 LTS
 - CPU: 12 cores
 - RAM: 24GB
 - Storage: SSD (High I/O)
-- Credentials: ubuntu / BHGYGI@765
+- Credentials: ubuntu / ***
 
 ================================================================================
 ## STEP 1: SERVER CONFIGURATION

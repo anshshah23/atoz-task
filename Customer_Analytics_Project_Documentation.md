@@ -25,7 +25,7 @@ Server Details:
 ### System Setup
 Commands Executed:
 ```bash
-ssh ubuntu@15.204.94.120
+ssh ubuntu@*.*.*.*
 sudo apt update
 sudo apt upgrade -y
 sudo apt autoremove -y

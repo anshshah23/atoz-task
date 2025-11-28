@@ -2,9 +2,7 @@
 # Date: November 29, 2025
 # Project: Database deployment and optimization for 1M+ customer transactions
 
-================================================================================
 ## PROJECT OVERVIEW
-================================================================================
 
 Objective: Design and deploy a normalized PostgreSQL database on a remote Ubuntu server 
 to analyze 1M+ customer transactions with optimized analytical queries meeting 
@@ -18,9 +16,7 @@ Server Details:
 - Storage: SSD (High I/O)
 - Credentials: ubuntu / ***
 
-================================================================================
 ## STEP 1: SERVER CONFIGURATION
-================================================================================
 
 ### System Setup
 Commands Executed:
@@ -84,9 +80,7 @@ sudo -u postgres psql -d customer_analytics -c "CREATE EXTENSION IF NOT EXISTS p
 
 Result: Database 'customer_analytics' created with performance monitoring enabled
 
-================================================================================
 ## STEP 2: DATA ACQUISITION AND PREPARATION
-================================================================================
 
 ### Dataset Download
 ```bash
@@ -122,9 +116,7 @@ Data Quality Issues Identified:
 - Inconsistent capitalization in Employees_status
 - "Missing" segment values
 
-================================================================================
 ## STEP 3: DATABASE SCHEMA DESIGN
-================================================================================
 
 ### Normalized Schema (6 Tables)
 
@@ -194,9 +186,7 @@ Schema Execution Result:
 - 20 indexes created for query optimization
 - All foreign key constraints established
 
-================================================================================
 ## STEP 4: ETL PIPELINE IMPLEMENTATION
-================================================================================
 
 ### Python ETL Script (load_data_v2.py)
 Key Features:
@@ -235,9 +225,7 @@ Found 252 unique customer profiles
 - Employment: Employees (313,696), Workers (259,481), Self-Employed (161,577), Unemployment (79,211)
 - Referral Split: 65% referral (538,759), 35% non-referral (284,673)
 
-================================================================================
 ## STEP 5: ANALYTICAL QUERIES IMPLEMENTATION
-================================================================================
 
 ### 10 Business Intelligence Queries Created:
 
@@ -271,9 +259,7 @@ Found 252 unique customer profiles
 10. **Daily Sales Summary**
     - What is the overall transaction summary (count, revenue, average spend)?
 
-================================================================================
 ## STEP 6: INITIAL PERFORMANCE TESTING
-================================================================================
 
 ### Performance Target: 5-65ms per query
 ### Initial Results (BEFORE OPTIMIZATION):
@@ -299,9 +285,7 @@ Root Causes Identified:
 - Missing materialized views for aggregated data
 - Suboptimal PostgreSQL configuration for analytics workload
 
-================================================================================
 ## STEP 7: PERFORMANCE OPTIMIZATION
-================================================================================
 
 ### Optimization Strategy Implemented:
 
@@ -410,9 +394,7 @@ FROM transactions GROUP BY hour_of_day;
 Total Materialized Views Created: 8
 Total Indexes Created: 37
 
-================================================================================
 ## STEP 8: FINAL PERFORMANCE RESULTS
-================================================================================
 
 ### Performance Testing Results (AFTER OPTIMIZATION):
 
@@ -434,9 +416,7 @@ Total Indexes Created: 37
 ### Final Query Performance Range: 0.076ms - 0.464ms
 **Performance Target Achievement: EXCEEDED by 99%+**
 
-================================================================================
 ## STEP 9: BUSINESS INSIGHTS DISCOVERED
-================================================================================
 
 ### Revenue Analysis:
 - **Total Revenue**: $1,173,266,719.04 from 823,432 transactions
@@ -486,9 +466,7 @@ Total Indexes Created: 37
 - **Peak Revenue Hours**: 10 AM and 4 PM show slightly higher transaction values
 - **Daily Consistency**: Stable transaction patterns across all days
 
-================================================================================
 ## STEP 10: FINAL DATABASE INFRASTRUCTURE
-================================================================================
 
 ### Production Database Status:
 ```
@@ -522,9 +500,7 @@ Database Size: ~100MB (optimized)
 - **CPU Utilization**: Parallel processing enabled (12 cores)
 - **Storage**: SSD optimized with proper indexing
 
-================================================================================
 ## PROJECT COMPLETION SUMMARY
-================================================================================
 
 ### 🎯 PROJECT OBJECTIVES STATUS:
 ✅ **Normalized Database Design**: 6-table schema with proper relationships
@@ -557,9 +533,7 @@ The Customer Transaction Analytics database is now fully operational and optimiz
 **Total Development Time**: Full-day implementation with complete optimization
 **Production Readiness**: ✅ READY FOR IMMEDIATE DEPLOYMENT
 
-================================================================================
 ## APPENDIX: TECHNICAL RESOURCES
-================================================================================
 
 ### Key Files Created:
 1. `create_schema.sql` - Database schema definition
@@ -583,6 +557,4 @@ The Customer Transaction Analytics database is now fully operational and optimiz
 - `final_summary.txt` - Final performance achievements
 - `Customer_Analytics_Project_Documentation.txt` - This comprehensive documentation
 
-=====
-END OF DOCUMENTATION
-=====
+## END OF DOCUMENTATION
